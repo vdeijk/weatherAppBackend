@@ -1,0 +1,16 @@
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\bin\Debug\net8.0\WeatherApi.Controllers.deps.json
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\bin\Debug\net8.0\WeatherApi.Controllers.dll
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\bin\Debug\net8.0\WeatherApi.Controllers.pdb
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\bin\Debug\net8.0\WeatherApi.Services.dll
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\bin\Debug\net8.0\WeatherApi.Services.pdb
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.csproj.AssemblyReference.cache
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.AssemblyInfo.cs
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.sourcelink.json
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherA.7FAC821F.Up2Date
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.dll
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\refint\WeatherApi.Controllers.dll
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\WeatherApi.Controllers.pdb
+C:\Users\Gebruiker\Desktop\Weather app\backend\WeatherApi.Controllers\obj\Debug\net8.0\ref\WeatherApi.Controllers.dll

@@ -1,0 +1,20 @@
+{
+  "Type": "Feature",
+  "Geometry": {
+    "Type": "Point",
+    "Coordinates": [4.8952, 52.3702, 0.0]
+  },
+  "Properties": {
+    "Location": "Amsterdam",
+    "Condition": "Sunny",
+    "Humidity": 65,
+    "Icon": "sunny.png",
+    "Parameter": {
+      "Values": {
+        "T2M": { "20251005": 15.2 },
+        "PRECTOTCORR": { "20251005": 0.3 },
+        "WS2M": { "20251005": 5.1 }
+      }
+    }
+  }
+}
