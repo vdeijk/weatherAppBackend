@@ -66,7 +66,7 @@ namespace WeatherApi.Services
         /// <param name="precipitation">Precipitation in mm</param>
         /// <param name="windSpeed">Wind speed in m/s</param>
         /// <returns>WeatherWarning enum value or null</returns>
-        public WeatherWarning? CalculateWarning(double temperature, double precipitation, double windSpeed)
+        public WeatherWarning CalculateWarning(double temperature, double precipitation, double windSpeed)
         {
             if (windSpeed >= 15) // threshold for high wind (m/s)
                 return WeatherWarning.HighWind;
@@ -76,7 +76,7 @@ namespace WeatherApi.Services
                 return WeatherWarning.VeryCold;
             if (temperature >= 35) // threshold for very hot (Celsius)
                 return WeatherWarning.VeryHot;
-            return null;
+            return WeatherWarning.None;
         }
 
         public List<ForecastDayDto> MapToForecast(NasaWeatherResponse nasaResponse)
