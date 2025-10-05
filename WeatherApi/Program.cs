@@ -26,8 +26,8 @@ builder.Services.AddScoped<IWeatherMappingService, WeatherMappingService>();
 // Add CORS policy for React app
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
-        policy => policy.WithOrigins("http://localhost:5173", "http://localhost:3000")
+    options.AddPolicy("AllowFrontend",
+        policy => policy.WithOrigins("https://vdeijk.github.io")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
@@ -41,7 +41,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowReactApp");
+app.UseCors("AllowFrontend");
 
 app.UseExceptionHandler("/error");
 
