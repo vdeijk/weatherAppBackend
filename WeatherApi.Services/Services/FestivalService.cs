@@ -22,7 +22,7 @@ namespace WeatherApi.Services
             {
                 if (UseMockData)
                 {
-                    var mockFilePath = Path.Combine(AppContext.BaseDirectory, _mockFileName);
+                    var mockFilePath = Path.Combine(AppContext.BaseDirectory, "WeatherApi.Services", "Data", _mockFileName);
                     if (!File.Exists(mockFilePath))
                         throw new FileNotFoundException("Mock festival data file not found.", mockFilePath);
 

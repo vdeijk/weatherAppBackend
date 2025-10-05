@@ -13,4 +13,3 @@ obj/
 # Ignore environment files
 .env
 # Ignore generated files
-WeatherApi.Services/Data/*.json

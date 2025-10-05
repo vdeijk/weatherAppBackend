@@ -27,12 +27,19 @@
   <ItemGroup>
     <None Include="..\WeatherApi.Services\Data\mock-festival-data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>WeatherApi.Services\Data\mock-festival-data.json</Link>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\WeatherApi.Services\Data\mock-nasa-weather.json">
+    <None Include="..\WeatherApi.Services\Data\mock-weather-normal.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>WeatherApi.Services\Data\mock-weather-normal.json</Link>
+    </None>
+    <None Include="..\WeatherApi.Services\Data\mock-weather-heavy-rain.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>WeatherApi.Services\Data\mock-weather-heavy-rain.json</Link>
+    </None>
+    <None Include="..\WeatherApi.Services\Data\mock-weather-high-wind.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>WeatherApi.Services\Data\mock-weather-high-wind.json</Link>
     </None>
   </ItemGroup>
 

@@ -6,14 +6,12 @@
   },
   "Properties": {
     "Location": "Amsterdam",
-    "Condition": "Sunny",
-    "Humidity": 65,
-    "Icon": "sunny.png",
     "Parameter": {
       "Values": {
-        "T2M": { "20251005": 15.2 },
-        "PRECTOTCORR": { "20251005": 0.3 },
-        "WS2M": { "20251005": 5.1 }
+  "T2M": { "20251005": 12.0 },
+  "PRECTOTCORR": { "20251005": 15.0 },
+  "WS2M": { "20251005": 6.0 },
+  "RH2M": { "20251005": 90 }
       }
     }
   }
