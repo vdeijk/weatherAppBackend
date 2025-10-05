@@ -24,19 +24,27 @@ namespace WeatherApi.Services
         /// <param name="longitude">Longitude in decimal degrees.</param>
         /// <param name="date">Date for weather data.</param>
         /// <returns>Raw NASA weather data as JSON string.</returns>
+        private static readonly Random _staticRandom = new Random();
+
         public async Task<string> GetWeatherDataAsync(double latitude, double longitude, DateTime date)
         {
             try
             {
                 if (UseMockData)
                 {
-                    // Look for the file in the output directory
-                    var mockFilePath = Path.Combine(AppContext.BaseDirectory, "mock-nasa-weather.json");
-                    if (!File.Exists(mockFilePath))
-                        throw new FileNotFoundException("Mock NASA weather data file not found.", mockFilePath);
-
-                    var mockJson = await File.ReadAllTextAsync(mockFilePath);
-                    return mockJson;
+                    // Randomly select one of three mock weather scenarios
+                    var dateKey = date.ToString("yyyyMMdd");
+                    var scenarios = new[]
+                    {
+                        // Normal weather (no warning)
+                        $"{{\n  \"Type\": \"Feature\",\n  \"Geometry\": {{\n    \"Type\": \"Point\",\n    \"Coordinates\": [4.8952, 52.3702, 0.0]\n  }},\n  \"Properties\": {{\n    \"Location\": \"Amsterdam\",\n    \"Parameter\": {{\n      \"Values\": {{\n        \"T2M\": {{ \"{dateKey}\": 15.2 }},\n        \"PRECTOTCORR\": {{ \"{dateKey}\": 0.3 }},\n        \"WS2M\": {{ \"{dateKey}\": 5.1 }}\n      }}\n    }}\n  }}\n}}",
+                        // Heavy rain (triggers HeavyRain warning)
+                        $"{{\n  \"Type\": \"Feature\",\n  \"Geometry\": {{\n    \"Type\": \"Point\",\n    \"Coordinates\": [4.8952, 52.3702, 0.0]\n  }},\n  \"Properties\": {{\n    \"Location\": \"Amsterdam\",\n    \"Parameter\": {{\n      \"Values\": {{\n        \"T2M\": {{ \"{dateKey}\": 12.0 }},\n        \"PRECTOTCORR\": {{ \"{dateKey}\": 15.0 }},\n        \"WS2M\": {{ \"{dateKey}\": 6.0 }}\n      }}\n    }}\n  }}\n}}",
+                        // High wind (triggers HighWind warning)
+                        $"{{\n  \"Type\": \"Feature\",\n  \"Geometry\": {{\n    \"Type\": \"Point\",\n    \"Coordinates\": [4.8952, 52.3702, 0.0]\n  }},\n  \"Properties\": {{\n    \"Location\": \"Amsterdam\",\n    \"Parameter\": {{\n      \"Values\": {{\n        \"T2M\": {{ \"{dateKey}\": 17.0 }},\n        \"PRECTOTCORR\": {{ \"{dateKey}\": 0.2 }},\n        \"WS2M\": {{ \"{dateKey}\": 18.0 }}\n      }}\n    }}\n  }}\n}}"
+                    };
+                    var selected = scenarios[_staticRandom.Next(scenarios.Length)];
+                    return selected;
                 }
 
                 string dateStr = date.ToString("yyyyMMdd");
