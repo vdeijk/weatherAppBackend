@@ -46,14 +46,37 @@ namespace WeatherApi.Services
             else
                 condition = "Clear";
 
+            var warning = CalculateWarning(temperature, precipitation, windSpeed);
+
             return new WeatherDataDto
             {
                 Temperature = temperature,
                 Condition = condition,
                 Humidity = humidity,
                 WindSpeed = windSpeed,
-                Precipitation = precipitation
+                Precipitation = precipitation,
+                Warning = warning
             };
+        }
+
+        /// <summary>
+        /// Calculates weather warning based on thresholds for wind, rain, temperature.
+        /// </summary>
+        /// <param name="temperature">Temperature in Celsius</param>
+        /// <param name="precipitation">Precipitation in mm</param>
+        /// <param name="windSpeed">Wind speed in m/s</param>
+        /// <returns>WeatherWarning enum value or null</returns>
+        public WeatherWarning? CalculateWarning(double temperature, double precipitation, double windSpeed)
+        {
+            if (windSpeed >= 15) // threshold for high wind (m/s)
+                return WeatherWarning.HighWind;
+            if (precipitation >= 10) // threshold for heavy rain (mm)
+                return WeatherWarning.HeavyRain;
+            if (temperature <= 0) // threshold for very cold (Celsius)
+                return WeatherWarning.VeryCold;
+            if (temperature >= 35) // threshold for very hot (Celsius)
+                return WeatherWarning.VeryHot;
+            return null;
         }
 
         public List<ForecastDayDto> MapToForecast(NasaWeatherResponse nasaResponse)

@@ -1,20 +1,52 @@
 [
   {
-    "Id": 1,
+    "Id": "1",
     "Name": "Spring Music Fest",
     "Date": "2025-04-15",
-    "Location": "Amsterdam"
+    "Time": "18:00",
+    "Location": "Amsterdam",
+    "Lat": 52.3676,
+    "Lng": 4.9041,
+    "Description": "A vibrant music festival to welcome spring."
   },
   {
-    "Id": 2,
+    "Id": "2",
     "Name": "Summer Dance Party",
     "Date": "2025-07-10",
-    "Location": "Rotterdam"
+    "Time": "20:00",
+    "Location": "Rotterdam",
+    "Lat": 51.9225,
+    "Lng": 4.47917,
+    "Description": "Dance the night away at Rotterdam's biggest summer party."
   },
   {
-    "Id": 3,
+    "Id": "3",
     "Name": "Autumn Food Fair",
     "Date": "2025-09-21",
-    "Location": "Utrecht"
+    "Time": "12:00",
+    "Location": "Utrecht",
+    "Lat": 52.0907,
+    "Lng": 5.1214,
+    "Description": "Enjoy delicious food and drinks at the autumn fair."
+  },
+  {
+    "Id": "4",
+    "Name": "Winter Lights Parade",
+    "Date": "2025-12-05",
+    "Time": "19:30",
+    "Location": "Eindhoven",
+    "Lat": 51.4416,
+    "Lng": 5.4697,
+    "Description": "A magical parade of lights to celebrate the winter season."
+  },
+  {
+    "Id": "5",
+    "Name": "Spring Art Expo",
+    "Date": "2025-05-20",
+    "Time": "10:00",
+    "Location": "Groningen",
+    "Lat": 53.2194,
+    "Lng": 6.5665,
+    "Description": "Discover local artists and their work at the annual art expo."
   }
 ]
