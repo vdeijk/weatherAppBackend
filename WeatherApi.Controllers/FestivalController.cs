@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using WeatherApi.Services;
 using WeatherApi.Services.Interfaces;
 using Microsoft.Extensions.Logging;
+using WeatherApi.Services.DTOs;
 
 namespace WeatherApi.Controllers
 {
@@ -26,7 +27,9 @@ namespace WeatherApi.Controllers
         /// </summary>
         /// <returns>List of festivals.</returns>
         [HttpGet]
-        public IActionResult GetFestivals()
+        [ProducesResponseType(typeof(List<FestivalDto>), 200)]
+        [ProducesResponseType(500)]
+        public ActionResult<List<FestivalDto>> GetFestivals()
         {
             try
             {

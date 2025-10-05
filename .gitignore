@@ -1,0 +1,16 @@
+# Ignore build output
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.user
+*.vs
+# Ignore Visual Studio temporary files
+.vscode/
+# Ignore logs
+*.log
+# Ignore environment files
+.env
+# Ignore generated files
+WeatherApi.Services/Data/*.json
